@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#search for:
+# 1. Files starting with "a" (case-insensitive)
+# 2. files ending with a "z" (case-insensitive)
+# 3. files starting with z and ending with "a!" (case-insensitive)
+find . -type f \( \
+    -iname 'a*' \
+    -o -iname '*z' \
+    -o -iname 'z*a!' \
+\) -print
